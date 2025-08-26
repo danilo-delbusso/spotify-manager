@@ -57,8 +57,8 @@ This project contains multiple tools.
 
 - Add your Spotify credentials to the `.env` file like this:
 ```bash
-SPOTIFY_ID=your_client_id
-SPOTIFY_SECRET=your_client_secret
+SPOTIFY_CLIENT_ID=your_client_id
+SPOTIFY_CLIENT_SECRET=your_client_secret
 ```
 
 #### 3. Install Dependencies
