@@ -31,6 +31,7 @@ func main() {
 			spotifyauth.ScopePlaylistModifyPublic,
 			spotifyauth.ScopePlaylistModifyPrivate,
 			spotifyauth.ScopeImageUpload,
+			spotifyauth.ScopeUserLibraryModify,
 		},
 	}
 
