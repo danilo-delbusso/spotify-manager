@@ -21,10 +21,10 @@ func main() {
 	}
 
 	authConfig := auth.Config{
-		RedirectURL:  "http://localhost:3000/callback",
+		RedirectURL:  "http://127.0.0.1:8000/callback",
 		ClientID:     os.Getenv("SPOTIFY_CLIENT_ID"),
 		ClientSecret: os.Getenv("SPOTIFY_CLIENT_SECRET"),
-		Port:         "3000",
+		Port:         "8000",
 		// Scopes updated to allow for playlist creation and modification
 		Scopes: []string{
 			spotifyauth.ScopeUserLibraryRead,
