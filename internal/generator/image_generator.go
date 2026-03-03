@@ -9,8 +9,9 @@ import (
 	"math/rand"
 	"spotify/internal/processor"
 
-	"github.com/fogleman/gg"
 	"hash/fnv"
+
+	"github.com/fogleman/gg"
 )
 
 const (
@@ -42,8 +43,7 @@ func (g *imageGenerator) GenerateForPlaylist(name string) (io.Reader, error) {
 	dc.Clear()
 
 	// 4. Draw several layers of waves.
-	numWaves := 7
-	for i := 0; i < numWaves; i++ {
+	for range 7 {
 		color := palette[rng.Intn(len(palette))]
 		dc.SetRGB(color[0], color[1], color[2])
 
