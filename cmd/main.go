@@ -39,7 +39,6 @@ func main() {
 		log.Fatal("🚨 SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET must be set.")
 	}
 
-	// === 2. Authentication ===
 	authenticator := auth.New(authConfig)
 	fmt.Println("👉 Please log in to Spotify by visiting this URL in your browser:")
 	fmt.Println(authenticator.AuthURL())
@@ -58,7 +57,6 @@ func main() {
 	}
 	fmt.Printf("\n✅ Logged in as: %s\n\n", user.DisplayName)
 
-	// === 3. Setup and Run Processor ===
 	logger := log.New(os.Stdout, " ", log.LstdFlags)
 
 	imageGenerator := generator.NewImageGenerator()
