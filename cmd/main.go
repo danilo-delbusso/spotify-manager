@@ -42,11 +42,12 @@ func main() {
 	authenticator := auth.New(authConfig)
 	fmt.Println("👉 Please log in to Spotify by visiting this URL in your browser:")
 	fmt.Println(authenticator.AuthURL())
+	fmt.Println("\n(If the redirect page fails to load, e.g. over SSH, paste the URL it tried to open — or just the code — here and press Enter.)")
 
 	authCtx, cancelAuth := context.WithTimeout(context.Background(), 3*time.Minute)
 	defer cancelAuth()
 
-	client, err := authenticator.GetClient(authCtx)
+	client, err := authenticator.GetClient(authCtx, os.Stdin)
 	if err != nil {
 		log.Fatalf("❌ Authentication failed: %v", err)
 	}
